@@ -1,3 +1,4 @@
+import os
 import pickle
 import streamlit as st
 import numpy as np
@@ -5,11 +6,12 @@ import numpy as np
 # Set Header
 st.header('Book Recommender System Using Machine Learning')
 
-# Load Pickled Artifacts
-model = pickle.load(open('../artifacts/model.pkl', 'rb'))
-books_name = pickle.load(open('../artifacts/books_name.pkl', 'rb'))
-final_rating = pickle.load(open('../artifacts/final_rating.pkl', 'rb'))
-book_pivot = pickle.load(open('../artifacts/book_pivot.pkl', 'rb'))
+# Load Pickled Artifacts (paths relative to this file so it runs from any working directory)
+ARTIFACTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'artifacts')
+model = pickle.load(open(os.path.join(ARTIFACTS, 'model.pkl'), 'rb'))
+books_name = pickle.load(open(os.path.join(ARTIFACTS, 'books_name.pkl'), 'rb'))
+final_rating = pickle.load(open(os.path.join(ARTIFACTS, 'final_rating.pkl'), 'rb'))
+book_pivot = pickle.load(open(os.path.join(ARTIFACTS, 'book_pivot.pkl'), 'rb'))
 
 
 def fetch_poster(suggestion):
