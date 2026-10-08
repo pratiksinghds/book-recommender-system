@@ -42,8 +42,7 @@ This project implements an item-based collaborative filtering recommender engine
 │   ├── books_name.pkl          # Index of filtered book titles
 │   ├── final_rating.pkl        # Cleaned ratings metadata (with poster URLs)
 │   └── book_pivot.pkl          # User-item pivot table
-├── src/
-│   └── __init__.py             # Source package init
+├── Book_Recommendor.ipynb      # Data cleaning and model training notebook
 ├── app.py                      # Streamlit application script
 ├── setup.py                    # Package distribution configuration
 ├── setup.sh                    # Streamlit server setup for deployment
@@ -51,3 +50,17 @@ This project implements an item-based collaborative filtering recommender engine
 ├── requirements.txt            # Python dependencies
 ├── .gitignore                  # Git ignore rules
 └── README.md                   # Project documentation
+```
+
+---
+
+## 🚀 Run it locally
+
+```bash
+git clone https://github.com/pratiksinghds/book-recommender-system.git
+cd book-recommender-system
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The trained model and lookup tables are already in `artifacts/`. The notebook `Book_Recommendor.ipynb` shows the data cleaning and model training.
