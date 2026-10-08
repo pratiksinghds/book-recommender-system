@@ -1,5 +1,9 @@
 # 📚 Collaborative Filtering Book Recommender System
 
+**Live demo:** https://pratik-book-recommender.streamlit.app/
+
+![Book recommender app](Screenshot%202026-09-10%20180952.png)
+
 An end-to-end Machine Learning web application that recommends books based on user reading history and ratings using item-based collaborative filtering. Built with **Scikit-Learn**, **Pandas**, and deployed via **Streamlit**.
 
 ---
